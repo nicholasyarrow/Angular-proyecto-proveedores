@@ -1,0 +1,39 @@
+<section style="margin-left: 20px; ;" id="about" class="mt-3">
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6">
+      <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>Empresa</th>
+              <th>Nombres</th>
+              <th>Cargo</th>
+              <th>Ciudad</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr class="itemm" *ngFor="let item of listaAbout"
+              (click)="seleccionarItem(item)"
+              >
+                
+                <td>{{item.empresa}}</td>
+                <td>{{item.nombres}}</td>
+                <td>{{item.cargo}}</td>
+                <td>{{item.ciudad}}</td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+    <div class="col-md-6" *ngIf="proveedorElegido">
+        <h3 style="font-size: 50px;">{{proveedorElegido.empresa}}</h3>
+        <p>{{proveedorElegido.nombres}}</p>
+        <p>{{proveedorElegido.cargo}}</p>
+        <p>{{proveedorElegido.ciudad}}</p>
+      </div>
+
+    </div>
+
+    </div>
+  </section>
+  
